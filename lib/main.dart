@@ -8,6 +8,7 @@ import 'screens/go_premium_screen.dart';
 import 'screens/account_screen.dart';
 import 'screens/sign_in_screen.dart';
 import 'screens/cart_screen.dart';
+import 'screens/payments_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,12 +27,14 @@ class EchoApp extends StatelessWidget {
         textTheme: GoogleFonts.robotoCondensedTextTheme(),
       ),
       home: MainScreen(content: OnboardingScreen()), // Default to OnboardingScreen
-      routes: {
-        '/register': (context) => MainScreen(content: RegisterScreen()),
-        '/home': (context) => MainScreen(content: HomeScreen()),
-        '/signin': (context) => MainScreen(content: SignInScreen()),
-        '/cart': (context) => MainScreen(content: CartScreen()),
-      },
+routes: {
+  '/register': (context) => MainScreen(content: RegisterScreen()),
+  '/home': (context) => MainScreen(content: HomeScreen()),
+  '/signin': (context) => MainScreen(content: SignInScreen()),
+  '/cart': (context) => MainScreen(content: CartScreen()),
+  '/payment': (context) => MainScreen(content: PaymentPage()),  // Add PaymentPage
+},
+
       debugShowCheckedModeBanner: false,
     );
   }
