@@ -32,7 +32,8 @@ routes: {
   '/home': (context) => MainScreen(content: HomeScreen()),
   '/signin': (context) => MainScreen(content: SignInScreen()),
   '/cart': (context) => MainScreen(content: CartScreen()),
-  '/payment': (context) => MainScreen(content: PaymentPage()),  // Add PaymentPage
+  '/payments': (context) => MainScreen(content: PaymentPage()),
+
 },
 
       debugShowCheckedModeBanner: false,

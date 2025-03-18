@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'payments_screen.dart'; // Import the Payments screen file
 
 class GoPremiumScreen extends StatelessWidget {
   const GoPremiumScreen({super.key});
@@ -33,7 +34,7 @@ class GoPremiumScreen extends StatelessWidget {
                 Text(
                   'Premium',
                   style: TextStyle(
-                    color: Colors.black, // Black text color
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Roboto Condensed',
                     fontSize: 36,
@@ -46,8 +47,8 @@ class GoPremiumScreen extends StatelessWidget {
                   child: Text(
                     'Unlock exclusive features and get the best prices first with Premium—your smarter way to save!',
                     style: GoogleFonts.poppins(
-                      color: Colors.black, // Black text color
-                      fontSize: 18, // Adjust the font size as needed
+                      color: Colors.black,
+                      fontSize: 18,
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -67,7 +68,7 @@ class GoPremiumScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 8),
                           Container(
-                            height: 250, // Fixed height to ensure both containers are the same size
+                            height: 250,
                             padding: const EdgeInsets.all(8.0),
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.black, width: 2.0),
@@ -78,17 +79,14 @@ class GoPremiumScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   '• 5 searches per day to find the best prices',
-                                  textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(color: Colors.black),
                                 ),
                                 Text(
                                   '• Create up to 3 shopping lists',
-                                  textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(color: Colors.black),
                                 ),
                                 Text(
                                   '• Basic price comparisons for popular stores',
-                                  textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(color: Colors.black),
                                 ),
                               ],
@@ -111,7 +109,7 @@ class GoPremiumScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 8),
                           Container(
-                            height: 250, // Fixed height to ensure both containers are the same size
+                            height: 250,
                             padding: const EdgeInsets.all(8.0),
                             decoration: BoxDecoration(
                               border: Border.all(color: Color(0xFF00BF63), width: 2.0),
@@ -122,27 +120,22 @@ class GoPremiumScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   '• Unlimited searches to find deals anytime',
-                                  textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(color: Colors.black),
                                 ),
                                 Text(
                                   '• Unlimited shopping lists',
-                                  textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(color: Colors.black),
                                 ),
                                 Text(
                                   '• Access to exclusive deals and discounts',
-                                  textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(color: Colors.black),
                                 ),
                                 Text(
                                   '• Price drop alerts on favorite items',
-                                  textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(color: Colors.black),
                                 ),
                                 Text(
                                   '• Ad-free browsing',
-                                  textAlign: TextAlign.left,
                                   style: GoogleFonts.poppins(color: Colors.black),
                                 ),
                               ],
@@ -163,16 +156,12 @@ class GoPremiumScreen extends StatelessWidget {
                           Navigator.pushReplacementNamed(context, '/home');
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black, // Black background color
-                          padding: EdgeInsets.symmetric(horizontal: 10,
-                              vertical: 15),
+                          backgroundColor: Colors.black,
+                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                         ),
                         child: Text(
                           'Back to home',
-                          style: GoogleFonts.poppins(
-                            color: Colors.white, // White text color
-                          ),
-                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(color: Colors.white),
                         ),
                       ),
                     ),
@@ -180,19 +169,15 @@ class GoPremiumScreen extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {
-                          // Handle the "Coming soon!" button press
+                          Navigator.pushNamed(context, '/payments');
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF00BF63), // Green background color
-                          padding: EdgeInsets.symmetric(horizontal: 10,
-                              vertical: 15),
+                          backgroundColor: Color(0xFF00BF63),
+                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                         ),
                         child: Text(
-                          'Coming soon!',
-                          style: GoogleFonts.poppins(
-                            color: Colors.white, // White text color
-                          ),
-                          textAlign: TextAlign.center,
+                          'Go to Payments',
+                          style: GoogleFonts.poppins(color: Colors.white),
                         ),
                       ),
                     ),
